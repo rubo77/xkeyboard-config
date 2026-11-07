@@ -8142,6 +8142,12 @@
       </option>
       <option>
         <configItem>
+          <name>misc:vim</name>
+          <description>Vim-style arrow keys on the AltGr layer; Caps Lock acts as AltGr</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>shift:both_capslock</name>
           <description>Both Shifts together enable Caps Lock</description>
         </configItem>

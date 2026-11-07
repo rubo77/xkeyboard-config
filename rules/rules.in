@@ -373,6 +373,7 @@
 ! layout[any]	option					= symbols
   *		misc:apl				= +apl(level3):%i
   *		misc:typo				= +typo(base):%i
+  *		misc:vim				= +vim(base):%i
   *		lv3:ralt_alt				= +level3(ralt_alt):%i
   *		grp:toggle				= +group(toggle):%i
   *		grp:alts_toggle				= +group(alts_toggle):%i

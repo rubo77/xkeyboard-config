@@ -1,0 +1,39 @@
+// Vim-style navigation on the AltGr (level 3) layer.
+//
+// Caps Lock becomes a second ISO_Level3_Shift; Caps_Lock stays
+// reachable on AltGr+Caps. The vim keys (h/j/k/l plus a/s/d/f/u/x
+// and 3/4 for Home/End) get arrow/editing functions on level 3 and
+// extra symbols on level 4 (AltGr+Shift). Levels 1/2 are left
+// untouched (NoSymbol), so the option works with any layout.
+//
+// Based on the approach from
+// https://askubuntu.com/questions/684459/
+
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "base" {
+
+    // Caps Lock acts as an additional AltGr;
+    // AltGr+Caps produces Caps_Lock.
+    key <CAPS> { [ ISO_Level3_Shift,  ISO_Level3_Shift,  Caps_Lock ] };
+
+    // Home row, right hand side
+    key <AD07> { [ NoSymbol,   NoSymbol,              Prior, infinity          ] }; // "u"
+
+    // Home row
+    key <AC01> { [ NoSymbol,   NoSymbol,             Escape, apostrophe        ] }; // "a"
+    key <AC02> { [ NoSymbol,   NoSymbol,            KP_Enter, braceleft        ] }; // "s"
+    key <AC03> { [ NoSymbol,   NoSymbol,               Next, braceright         ] }; // "d"
+    key <AC04> { [ NoSymbol,   NoSymbol,           BackSpace, dollar           ] }; // "f"
+    key <AC06> { [ NoSymbol,   NoSymbol,              Left, grave              ] }; // "h"
+    key <AC07> { [ NoSymbol,   NoSymbol,              Down, ampersand          ] }; // "j"
+    key <AC08> { [ NoSymbol,   NoSymbol,                Up, backslash          ] }; // "k"
+    key <AC09> { [ NoSymbol,   NoSymbol,              Right, multiply          ] }; // "l"
+
+    // Bottom row
+    key <AB02> { [ NoSymbol,   NoSymbol,             Delete, U203A             ] }; // "x"
+
+    // Number row
+    key <AE03> { [ NoSymbol,   NoSymbol,               Home, threesuperior      ] }; // "3"
+    key <AE04> { [ NoSymbol,   NoSymbol,                End, foursuperior       ] }; // "4"
+
+};
