@@ -235,6 +235,12 @@
         </variant>
         <variant>
           <configItem popularity="exotic">
+            <name>coffeeplusplus</name>
+            <description>German (Coffee++)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
             <name>ru-recom</name>
             <!-- Keyboard indicator for Russian layouts -->
             <shortDescription>ru</shortDescription>
